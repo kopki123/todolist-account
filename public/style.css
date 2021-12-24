@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+body {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 48px;
+  letter-spacing: 1.3px;
+  color: #9fd68c;
+}
+
+.logout-btn:hover {
+  cursor: pointer;
+}
+
+.addtodo-container {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: #9fd68c 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+.addtodo-container input {
+  width: 75%;
+  font-size: 24px;
+  padding: 10px;
+  background-color: #9fd68c;
+  border: none;
+  border-radius: 5px;
+}
+
+.addtodo-container input:focus {
+  outline: none;
+}
+
+.addtodo-container button {
+  background-color: white;
+  border: #9fd68c 1px solid;
+  color: #9fd68c;
+  font-size: 16px;
+}
+
+.addtodo-container button:hover {
+  background-color: #9fd68c;
+  color: white;
+}
+
+.filter-todo-btns {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: #9fd68c 2px solid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.filter-todo-btns button {
+  background-color: white;
+  border: #9fd68c 1px solid;
+  color: #9fd68c;
+  font-size: 16px;
+}
+
+.filter-todo-btns button:hover {
+  background-color: #9fd68c;
+  color: white;
+}
+
+.filter-todo-btns button.active {
+  background-color: #9fd68c;
+  color: white;
+}
+
+.todolist {
+  width: 600px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background-color: #9fd68c;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.todo {
+  margin: 20px;
+  padding: 5px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.todo h4 {
+  font-size: 20px;
+  width: 55%;
+}
+
+.edittodo-input {
+  margin: 20px;
+  width: 55%;
+  font-size: 24px;
+  padding: 10px;
+  background-color: #9fd68c;
+  border: none;
+  border-radius: 5px;
+}
+
+.edittodo-input:focus {
+  outline: none;
+}
+
+.edit-btn {
+  background-color: #bbf3ff;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: #ff7575;
+  font-size: 16px;
+}
+
+nav {
+  background-color: #9fd68c;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav h4 {
+  color: white;
+  margin: 20px;
+}
+
+.login-form {
+  width: 400px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.login-form div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-form label {
+  width: 20%;
+}
+
+.login-form input {
+  padding: 10px;
+  background-color: #9fd68c;
+  border: none;
+  border-radius: 5px;
+  width: 275px;
+  font-size: 20px;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.login-form button {
+  background-color: white;
+  border: #9fd68c 1px solid;
+  color: #9fd68c;
+  font-size: 16px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.login-form button:hover {
+  background-color: #9fd68c;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .addtodo-container {
+    width: 85%;
+  }
+  .filter-todo-btns {
+    width: 85%;
+  }
+  .todolist {
+    width: 85%;
+  }
+  .todo {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  .todo h4 {
+    width: 45%;
+    font-size: 16px;
+  }
+  .todo button {
+    padding: 10px 10px;
+  }
+  .edittodo-input {
+    margin: 10px;
+    width: 50%;
+    font-size: 24px;
+  }
+  .login-form {
+    width: 90%;
+  }
+  .login-form label {
+    width: 10%;
+  }
+  .login-form input {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .todo {
+    margin: 10px;
+    padding: 3px 10px;
+  }
+  .todo button {
+    padding: 5px 5px;
+  }
+  .addtodo-container input {
+    width: 60%;
+  }
+  .addtodo-container button {
+    padding: 5px 10px;
+  }
+  .login-form {
+    width: 95%;
+  }
+  .login-form label {
+    width: 10%;
+  }
+  .login-form input {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+$primary: #9fd68c;
+
+@mixin btn-basic {
+  background-color: white;
+  border: $primary 1px solid;
+  color: $primary;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+}
+
+@mixin input-basic {
+  padding: 10px;
+  background-color: $primary;
+  border: none;
+  border-radius: 5px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 48px;
+  letter-spacing: 1.3px;
+  color: $primary;
+}
+
+.logout-btn:hover {
+  cursor: pointer;
+}
+
+.addtodo-container {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: $primary 2px solid;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  input {
+    width: 75%;
+    font-size: 24px;
+    @include input-basic;
+  }
+
+  button {
+    @include btn-basic;
+  }
+}
+
+.filter-todo-btns {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: $primary 2px solid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  button {
+    @include btn-basic;
+
+    &.active {
+      background-color: $primary;
+      color: white;
+    }
+  }
+}
+
+.todolist {
+  width: 600px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background-color: $primary;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.todo {
+  margin: 20px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 5px;
+
+  h4 {
+    font-size: 20px;
+    width: 55%;
+  }
+}
+
+.edittodo-input {
+  margin: 20px;
+  width: 55%;
+  font-size: 24px;
+
+  @include input-basic;
+}
+
+.edit-btn {
+  background-color: #bbf3ff;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: #ff7575;
+  font-size: 16px;
+}
+
+nav {
+  background-color: $primary;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    color: white;
+    margin: 20px;
+  }
+}
+
+.login-form {
+  width: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label {
+    width: 20%;
+  }
+
+  input {
+    @include input-basic;
+    width: 275px;
+    font-size: 20px;
+  }
+
+  button {
+    @include btn-basic;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .addtodo-container {
+    width: 85%;
+  }
+
+  .filter-todo-btns {
+    width: 85%;
+  }
+
+  .todolist {
+    width: 85%;
+  }
+
+  .todo {
+    margin: 10px;
+    padding: 5px 10px;
+
+    h4 {
+      width: 45%;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 10px;
+    }
+  }
+
+  .edittodo-input {
+    margin: 10px;
+    width: 50%;
+
+    font-size: 24px;
+  }
+
+  .login-form {
+    width: 90%;
+
+    label {
+      width: 10%;
+    }
+
+    input {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .todo {
+    margin: 10px;
+    padding: 3px 10px;
+
+    button {
+      padding: 5px 5px;
+    }
+  }
+
+  .addtodo-container input {
+    width: 60%;
+  }
+
+  .addtodo-container button {
+    padding: 5px 10px;
+  }
+
+  .login-form {
+    width: 95%;
+
+    label {
+      width: 10%;
+    }
+
+    input {
+      width: 70%;
+    }
+  }
+}
